@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image-processing-pipeline"
+version = "1.0.0"
+authors = [
+  { name = "Boni Ashok", email = "boniashok@example.com" }
+]
+description = "Fast, modular, parallel CLI tool and Python library for batch image transformations."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+keywords = ["image-processing", "computer-vision", "batch-processing", "cli", "pillow"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+    "Pillow>=9.0.0",
+    "tqdm>=4.65.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black",
+    "ruff",
+]
+
+[project.scripts]
+image-pipeline = "image_pipeline.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/BoniAshok/image-processing-pipeline"
+Repository = "https://github.com/BoniAshok/image-processing-pipeline"
+Issues = "https://github.com/BoniAshok/image-processing-pipeline/issues"
